@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-apply from: 'bintray.gradle'
+//apply from: 'bintray.gradle'
 
 android {
     compileSdkVersion build_versions.compileSdk
@@ -45,3 +45,4 @@ dependencies {
     api deps.support.appcompat
     api deps.zxing
 }
+apply from:"./aliyunmaven.gradle"
