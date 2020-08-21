@@ -4,9 +4,9 @@ def _local = true
 // 是否未快照模式
 def _snapshot = false
 // 组id
-def _groupId = "org.ms"
+def _groupId = "com.ms"
 // 项目id
-def _artifactId = "androidx-sdk-zxing"
+def _artifactId = "module-zxing"
 // 发布类型 aar jar
 def _packaging = "aar"
 // 发布版本
@@ -38,10 +38,8 @@ if (_local) {
             repository(url: "https://repo.rdc.aliyun.com/repository/73792-release-PXkyIy/") {
 
                 authentication(userName: System.getenv("ALIYUN_MAVEN_USERNAME"), password: System.getenv("ALIYUN_MAVEN_PASSWORD"))
-                //authentication(userName: "KwPAxj", password: "KKnP3maIK3")
             }
             snapshotRepository(url: "https://repo.rdc.aliyun.com/repository/73792-snapshot-z4fvGZ/") {
-                //authentication(userName: "KwPAxj", password: "KKnP3maIK3")
                 authentication(userName: System.getenv("ALIYUN_MAVEN_USERNAME"), password: System.getenv("ALIYUN_MAVEN_PASSWORD"))
             }
             pom.project {
